@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prédio Comercial em Patos de Minas</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .fade-in {
+        animation: fadeIn 1s ease-in forwards;
+        opacity: 0;
+      }
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800 font-sans">
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <img
+          src="assets/logo-lj.svg"
+          alt="Logo LJ Empreendimentos"
+          class="h-14"
+        />
+        <a
+          href="#contato"
+          class="bg-red-600 text-white px-5 py-2 rounded-lg shadow hover:bg-red-700 transition text-sm font-medium"
+          >Agendar Visita</a
+        >
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-black py-20 px-6 md:px-0">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+        <!-- Video Thumbnail with Popup Trigger -->
+        <div>
+          <div
+            class="relative cursor-pointer group"
+            onclick="document.getElementById('videoModal').classList.remove('hidden')"
+          >
+            <img
+              src="https://img.youtube.com/vi/J5ugaglrzzw/maxresdefault.jpg"
+              alt="Thumbnail do vídeo"
+              class="rounded-xl shadow-2xl w-full"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"
+            >
+              <svg
+                class="w-16 h-16 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Description Section -->
+        <div class="text-white">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 text-red-500">
+            Conheça o Imóvel
+          </h2>
+          <p class="mb-4 text-lg leading-relaxed">
+            📍 No coração de Patos de Minas, uma oportunidade única está
+            disponível para venda ou aluguel:
+          </p>
+          <p class="mb-4 text-base">
+            Um prédio comercial moderno, com <strong>3764,78m²</strong> de área,
+            <strong>6 pavimentos + cobertura</strong>, 2 andares de garagem para
+            até <strong>42 veículos</strong> e estrutura pensada para atender
+            empresas exigentes e clínicas completas.
+          </p>
+          <ul class="space-y-2 mb-6 text-sm">
+            <li>✅ Rede estruturada por andar</li>
+            <li>✅ Gerador e poços artesianos</li>
+            <li>✅ Acabamentos de alto padrão</li>
+            <li>✅ Versatilidade para diversos negócios</li>
+          </ul>
+          <p class="mb-6 text-base">
+            Se você busca <strong>qualidade</strong>,
+            <strong>localização privilegiada</strong> e
+            <strong>retorno garantido</strong>, esse é o imóvel ideal.
+          </p>
+          <a
+            href="#contato"
+            class="inline-block bg-red-600 text-white px-6 py-3 rounded-lg text-base font-semibold hover:bg-red-700 transition"
+            >Agendar Visita</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <div
+      id="videoModal"
+      class="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center hidden px-4"
+      onclick="if(event.target.id === 'videoModal') this.classList.add('hidden')"
+    >
+      <div
+        class="relative w-full max-w-md md:max-w-2xl rounded-lg overflow-hidden shadow-lg"
+        style="aspect-ratio: 3 / 3; background: black"
+      >
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
+          <iframe
+            class="w-full h-full object-cover"
+            src="https://www.youtube.com/embed/J5ugaglrzzw?autoplay=1"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <button
+          onclick="document.getElementById('videoModal').classList.add('hidden'); event.stopPropagation();"
+          class="absolute top-3 right-3 bg-red-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-2xl font-bold shadow-lg hover:bg-red-700 transition"
+          aria-label="Fechar vídeo"
+        >
+          ×
+        </button>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="bg-red-600 text-white py-16 text-center">
+      <div class="max-w-3xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Localização privilegiada, estrutura completa
+        </h2>
+        <p class="text-lg mb-6">
+          Ideal para clínicas, escritórios, centros corporativos e negócios que
+          exigem presença marcante e conforto.
+        </p>
+        <a
+          href="#contato"
+          class="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition"
+          >Quero mais informações</a
+        >
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-20 bg-gray-50">
+      <div class="max-w-2xl mx-auto text-center px-6">
+        <h2 class="text-4xl font-bold text-gray-900 mb-6">Entre em contato</h2>
+        <p class="mb-4 text-gray-700 text-lg">
+          Agende sua visita ou tire suas dúvidas com nosso time de atendimento.
+        </p>
+        <div class="text-lg text-gray-800 space-y-2">
+          <p>📞 <strong>(34) 99999-9999</strong></p>
+          <p>📍 Rua José de Santana, 674, Centro, Patos de Minas</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center py-6 text-sm">
+      <p>&copy; 2025 LJ Empreendimentos. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
